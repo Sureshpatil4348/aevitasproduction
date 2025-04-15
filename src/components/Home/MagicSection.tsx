@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRobot, FaCode, FaYoutube, FaEdit, FaUpload, FaMagic } from 'react-icons/fa';
+import { FaRobot, FaCode, FaYoutube, FaEdit, FaUpload, FaMagic, FaPlay } from 'react-icons/fa';
 import Link from 'next/link';
 
 const MagicSection = () => {
