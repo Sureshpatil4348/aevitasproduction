@@ -2,7 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaYoutube, FaPlayCircle, FaUsers, FaEye } from 'react-icons/fa';
 
-const ChannelCard = ({ title, category, subscribers, views, thumbnailSrc, delay = 0 }) => {
+interface ChannelCardProps {
+  title: string;
+  category: string;
+  subscribers: string;
+  views: string;
+  thumbnailSrc: string;
+  delay?: number;
+}
+
+const ChannelCard = ({ title, category, subscribers, views, thumbnailSrc, delay = 0 }: ChannelCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
