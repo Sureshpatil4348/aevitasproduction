@@ -28,9 +28,6 @@ const Footer = () => {
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'FAQs', href: '/faqs' },
         { name: 'Privacy Policy', href: '/privacy-policy' },
         { name: 'Terms of Service', href: '/terms-of-service' },
       ],

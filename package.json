@@ -1,13 +1,13 @@
 {
   "name": "aevitas-website",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Website for Aevitas - AI-Powered Video Content Creation",
   "author": "Aevitas Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aevitas/aevitas-website"
+    "url": "https://github.com/Sureshpatil4348/aevitasproduction.git"
   },
   "scripts": {
     "dev": "next dev",

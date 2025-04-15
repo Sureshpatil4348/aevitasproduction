@@ -1,131 +1,63 @@
-# Aevitas - AI-Powered Video Content Creation
+# Aevitas - AI-Powered Video Production Platform
 
-This is the website for Aevitas, a company that leverages cutting-edge AI to automate and simplify video content creation for multiple platforms.
-
-## Project Overview
-
-Aevitas harnesses AI to build automated YouTube channels and engaging digital videos, offering end-to-end service to clients. The website showcases five unique YouTube channels (Ridiculously Rich, ConBuster, Whodunit Files, Showdown Central, RankItUp) and presents clear service packages for potential clients.
+Aevitas is a modern web platform showcasing AI-powered video production services and automated YouTube channel management.
 
 ## Features
 
-- Modern, tech-savvy design with AI-inspired visual elements
-- Responsive layout for all devices
-- Showcase of 5 unique YouTube channels
-- Detailed service offerings
-- Pricing packages
-- Team and testimonial sections
-- Contact form and information
+- Automated YouTube channel creation and management
+- AI-powered video production services
+- End-to-end content creation pipeline
+- Multi-platform distribution capabilities
 
-## Tech Stack
+## Technology Stack
 
-- Next.js - React framework
-- TypeScript - Type-safe JavaScript
-- TailwindCSS - Utility-first CSS framework
-- Framer Motion - Animation library
-- React Icons - Icon library
+- **Frontend**: Next.js, React, TypeScript
+- **Styling**: Tailwind CSS, SCSS
+- **Animation**: Framer Motion
+- **Deployment**: Netlify
 
-## Getting Started
+## Local Development
 
-### Prerequisites
-
-- Node.js 14.x or higher
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/aevitas-website.git
-cd aevitas-website
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-# or
-yarn install
-```
 
-3. Run the development server:
-```bash
+# Run development server
 npm run dev
-# or
-yarn dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+## Deployment to Netlify
+
+This site is configured for easy deployment to Netlify:
+
+1. Connect your GitHub repository to Netlify
+2. Use the following build settings:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+3. Add the following environment variables:
+   - `NEXT_PUBLIC_SITE_URL`: Your production URL
+
+The `netlify.toml` file in this repository handles most configuration automatically.
 
 ## Project Structure
 
-- `/src/components` - React components
-  - `/Layout` - Layout components like Navbar and Footer
-  - `/Home` - Homepage sections
-- `/src/pages` - Next.js pages
-- `/src/styles` - Global styles
-- `/src/utils` - Utility functions and data
-- `/public` - Static assets
-  - `/images/channels` - Channel logos and images
+- `src/pages`: Next.js pages
+- `src/components`: Reusable React components
+- `src/styles`: Global styles and Tailwind configuration
+- `src/utils`: Utility functions and data files
+- `public`: Static assets
 
-## Deployment
+## Version History
 
-The website can be deployed to any static hosting service or Node.js hosting platform that supports Next.js applications, such as Vercel, Netlify, or AWS Amplify.
-
-### Deployment to Vercel
-
-The easiest way to deploy the website is using Vercel, the creators of Next.js:
-
-1. Create a Vercel account at [vercel.com](https://vercel.com)
-2. Install the Vercel CLI:
-```bash
-npm install -g vercel
-```
-3. Run the deployment command from the project root:
-```bash
-vercel
-```
-4. Follow the prompt instructions to complete the deployment.
-
-### Deployment to Netlify
-
-1. Create a Netlify account at [netlify.com](https://netlify.com)
-2. Install the Netlify CLI:
-```bash
-npm install -g netlify-cli
-```
-3. Build the project:
-```bash
-npm run build
-# or
-yarn build
-```
-4. Deploy to Netlify:
-```bash
-netlify deploy
-```
-
-### Environment Variables
-
-For production deployment, you may need to set the following environment variables:
-
-- `NEXT_PUBLIC_SITE_URL` - The URL of your website
-- `NEXT_PUBLIC_API_URL` - The URL of your API (if applicable)
+- 1.1.0: Updated footer layout, contact form enhancements, Netlify deployment configuration
+- 1.0.0: Initial release with core pages and functionality
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Channel Data Sources
-
-The channel data is stored in the `/src/utils/channelData.ts` file and can be updated as needed. The actual channel logos and images are located in the `/public/images/channels` directory.
-
-## Customization
-
-### Theme Colors
-
-The theme colors can be customized in the `tailwind.config.js` file. The current theme uses:
-
-- Primary: `#4361ee` (blue)
-- Secondary: `#7209b7` (purple)
-- Accent: `#f72585` (pink)
-
-Each channel also has its own color scheme defined in the configuration. 
+MIT 
