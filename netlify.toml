@@ -3,17 +3,18 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "18.x"
-  NPM_VERSION = "9.x"
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+# The redirect to index.html is not needed for Next.js and can cause issues
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+#   force = false
   
 [dev]
   command = "npm run dev"
