@@ -3,10 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [],
-    unoptimized: process.env.NODE_ENV === 'production',
+    unoptimized: true,
   },
   swcMinify: true,
-  output: 'standalone',
+  // Change from 'standalone' to 'export' for static site generation
+  // This works better with Netlify
+  output: 'export',
+  // Disable image optimization as it's not compatible with 'export'
+  distDir: 'out',
+  // Ensure trailing slashes for consistent paths
+  trailingSlash: true,
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

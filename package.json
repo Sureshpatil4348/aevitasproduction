@@ -12,6 +12,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "netlify": "next build",
     "start": "next start",
     "lint": "next lint"
   },
