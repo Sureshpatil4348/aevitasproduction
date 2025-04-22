@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 249, 250;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 18, 18, 18;
+    --background-end-rgb: 30, 30, 30;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Global animation keyframes */
+@keyframes gradient-slow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes ping-slow {
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Animation utility classes */
+.animate-gradient-slow {
+  animation: gradient-slow 8s ease infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Text gradient */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Common animation classes */
+.fade-in {
+  @apply opacity-0 transition-opacity duration-700 ease-in;
+  
+  &.appear {
+    @apply opacity-100;
+  }
+}
+
+.slide-up {
+  @apply translate-y-10 opacity-0 transition-all duration-700 ease-out;
+  
+  &.appear {
+    @apply translate-y-0 opacity-100;
+  }
+}
+
+.slide-in-right {
+  @apply translate-x-10 opacity-0 transition-all duration-700 ease-out;
+  
+  &.appear {
+    @apply translate-x-0 opacity-100;
+  }
+}
+
+.slide-in-left {
+  @apply -translate-x-10 opacity-0 transition-all duration-700 ease-out;
+  
+  &.appear {
+    @apply translate-x-0 opacity-100;
+  }
+}
+
+/* Common button styles */
+.btn {
+  @apply rounded-md px-6 py-3 font-medium transition-all duration-300 ease-in-out;
+  
+  &.btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  &.btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  &.btn-accent {
+    @apply bg-accent text-white hover:bg-accent-dark;
+  }
+  
+  &.btn-outline {
+    @apply border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white;
+  }
+}
+
+/* Section styling */
+.section {
+  @apply py-16 md:py-24;
+  
+  .section-heading {
+    @apply mb-12 text-center;
+    
+    h2 {
+      @apply font-heading text-3xl font-bold md:text-4xl lg:text-5xl;
+    }
+    
+    p {
+      @apply mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300;
+    }
+  }
+}
+
+/* Container */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1280px;
+}
+
+/* Card styling */
+.card {
+  @apply overflow-hidden rounded-xl bg-white p-6 shadow-lg transition-all duration-300 ease-in-out dark:bg-dark dark:shadow-gray-800;
+  
+  &:hover {
+    @apply shadow-xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500;
+} 
