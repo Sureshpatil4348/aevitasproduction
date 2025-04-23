@@ -16,16 +16,6 @@ const Footer = () => {
       ],
     },
     {
-      title: 'Our Channels',
-      links: [
-        { name: 'Ridiculously Rich', href: '/channels#ridiculously-rich' },
-        { name: 'ConBuster', href: '/channels#conbuster' },
-        { name: 'Whodunit Files', href: '/channels#whodunit-files' },
-        { name: 'Showdown Central', href: '/channels#showdown-central' },
-        { name: 'RankItUp', href: '/channels#rankitup' },
-      ],
-    },
-    {
       title: 'Resources',
       links: [
         { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -49,7 +39,7 @@ const Footer = () => {
         <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
       </div>
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold text-primary">Aevitas</span>

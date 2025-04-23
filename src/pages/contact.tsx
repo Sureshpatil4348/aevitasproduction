@@ -114,7 +114,7 @@ const ContactPage = () => {
       <section className="relative min-h-[70vh] flex items-center pt-32 pb-24 bg-gray-950 text-white overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           {/* Gradient background */}
-          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
+          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5" style={{ display: 'none' }}></div>
           
           {/* Animated gradient blobs */}
           <motion.div 
@@ -296,7 +296,7 @@ const ContactPage = () => {
       {/* Contact Form & Information Section */}
       <section id="contact-form" className="py-32 bg-gray-950 text-white relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
+          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5" style={{ display: 'none' }}></div>
           <motion.div
             className="absolute top-[10%] right-[5%] w-[30rem] h-[30rem] rounded-full bg-primary/5 blur-[100px]"
             style={{ y: y1 }}
@@ -659,9 +659,9 @@ const ContactPage = () => {
       </section>
 
       {/* Interactive Map Section with 3D-like effect */}
-      <section className="py-32 bg-gray-900 relative overflow-hidden">
+      <section className="py-32 bg-gray-900 relative overflow-hidden" style={{ display: 'none' }}>
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
+          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5" style={{ display: 'none' }}></div>
           <motion.div 
             className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] rounded-full bg-primary/5 blur-[100px]"
             animate={{ 
