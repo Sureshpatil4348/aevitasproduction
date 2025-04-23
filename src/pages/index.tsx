@@ -15,12 +15,12 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection />
-      <ServicesOverview />
-      <PlatformsSection />
       <ChannelShowcase />
-      <PricingPackages />
+      <PlatformsSection />
+      <ServicesOverview />
+      {/* <PricingPackages /> */}
       <GlobalTeam />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <ContactSection />
     </Layout>
   );

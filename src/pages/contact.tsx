@@ -683,7 +683,7 @@ const ContactPage = () => {
               Visit Our <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Office</span>
             </h2>
             <p className="text-gray-300 mb-12 text-lg">
-              We're located in the heart of San Francisco's innovation district. Schedule an appointment to drop by and discuss your project in person.
+              Our office is located in the heart of San Francisco's innovation district. Schedule an appointment to drop by and discuss your project in person.
             </p>
           </motion.div>
           

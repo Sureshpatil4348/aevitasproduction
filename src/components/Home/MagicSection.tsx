@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { FaRobot, FaCode, FaYoutube, FaEdit, FaUpload, FaMagic, FaPlay } from 'react-icons/fa';
 import Link from 'next/link';
 
+import { useState } from 'react';
+
 const MagicSection = () => {
+  const [showVideo, setShowVideo] = useState(false);
   const steps = [
     {
       icon: <FaRobot className="w-6 h-6" />,
@@ -79,8 +82,7 @@ const MagicSection = () => {
 
         {/* Process flow */}
         <div className="relative mb-24">
-          {/* Connecting lines */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary transform -translate-y-1/2 hidden md:block"></div>
+          {/* Removed connecting lines to match portfolio page */}
           
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -123,19 +125,36 @@ const MagicSection = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative aspect-video lg:aspect-auto">
-              <img 
-                src="/images/demo-thumbnail.jpg" 
-                alt="Aevitas AI Demo" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <a 
-                  href="#" 
-                  className="bg-white/95 hover:bg-white transition-colors duration-300 rounded-full p-5 shadow-xl"
-                >
-                  <FaPlay className="w-6 h-6 text-primary" />
-                </a>
-              </div>
+              {!showVideo ? (
+                <>
+                  <img 
+                    src="/images/demo-thumbnail.jpg" 
+                    alt="Aevitas AI Demo" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <button
+                      type="button"
+                      onClick={() => setShowVideo(true)}
+                      className="bg-white/95 hover:bg-white transition-colors duration-300 rounded-full p-5 shadow-xl"
+                      aria-label="Play demo video"
+                    >
+                      <FaPlay className="w-6 h-6 text-primary" />
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dVlC9Uz7E08?autoplay=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full absolute inset-0 rounded-2xl"
+                ></iframe>
+              )}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 pt-24">
                 <span className="text-white font-medium text-sm px-3 py-1 bg-primary/80 rounded-full">Watch Demo</span>
                 <h3 className="text-xl font-bold text-white mt-2">See Aevitas AI generate a video from scratch</h3>

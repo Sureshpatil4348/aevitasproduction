@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { testimonialData } from '@/utils/testimonialData';
@@ -129,7 +129,7 @@ const GlobalTeam = () => {
         {/* Testimonials */}
         <div className="mt-12">
           <motion.h3
-            className="text-center text-3xl font-bold mb-16"
+            className="text-center text-3xl font-bold mb-12"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 1.0, duration: 0.5 }}
@@ -137,47 +137,119 @@ const GlobalTeam = () => {
             What Our Clients Say
           </motion.h3>
 
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-2">
-            {testimonialData.slice(0, 2).map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                className="relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700"
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 1.1 + index * 0.2, duration: 0.5 }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              >
-                <div className="absolute top-0 right-0 bg-gradient-to-bl from-primary/20 to-transparent w-48 h-48 rounded-bl-full"></div>
-                <FaQuoteLeft className="absolute top-6 left-6 text-3xl text-primary/30" />
-                <div className="p-8 pt-12">
-                  <div className="flex mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="text-yellow-500 mr-1" />
-                    ))}
-                  </div>
-                  <p className="text-lg mb-8 leading-relaxed">{testimonial.quote}</p>
-                  <div className="flex items-center">
-                    <div className="h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary to-secondary p-[3px]">
-                      <img
-                        src={testimonial.imageSrc}
-                        alt={testimonial.name}
-                        className="h-full w-full rounded-full object-cover"
-                      />
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="text-xl font-bold">{testimonial.name}</h4>
-                      <p className="text-gray-400">
-                        {testimonial.position}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* Testimonials with React state for pagination */}
+          <TestimonialSection />
         </div>
       </div>
     </section>
+  );
+};
+
+// Testimonial Section with pagination as a separate component for cleaner state management
+const TestimonialSection = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const testimonialsPerPage = 3;
+  const totalPages = Math.ceil(testimonialData.length / testimonialsPerPage);
+  
+  // Get current testimonials
+  const getCurrentTestimonials = () => {
+    const startIndex = currentPage * testimonialsPerPage;
+    return testimonialData.slice(startIndex, startIndex + testimonialsPerPage);
+  };
+
+  return (
+    <div className="max-w-7xl mx-auto px-4">
+      {/* Testimonial Grid with consistent heights */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        {getCurrentTestimonials().map((testimonial, index) => {
+          // Use consistent styling across all cards
+          const gradientStyle = index % 2 === 0 ? 
+            'from-primary/20 to-transparent' : 
+            'from-secondary/20 to-transparent';
+
+          return (
+            <motion.div
+              key={testimonial.id}
+              className="relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-primary/50 transition-all duration-300 shadow-lg h-full flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * index, duration: 0.5 }}
+              whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+            >
+              <div className={`absolute top-0 right-0 bg-gradient-to-bl ${gradientStyle} w-48 h-48 rounded-bl-full`}></div>
+              <FaQuoteLeft className={`absolute top-6 left-6 text-3xl ${index % 2 === 0 ? 'text-primary/30' : 'text-secondary/30'}`} />
+              
+              <div className="p-8 pt-12 flex flex-col h-full">
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="text-yellow-500 mr-1" />
+                  ))}
+                </div>
+                
+                {/* Quote with proper width handling */}
+                <div className="flex-grow">
+                  <p className="text-lg mb-6 leading-relaxed font-medium">
+                    "{testimonial.quote}"
+                  </p>
+                </div>
+                
+                {/* Company/position footer */}
+                <div className="border-t border-gray-700/50 pt-4 mt-4">
+                  <h4 className="text-xl font-bold text-primary">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-gray-400">
+                    {testimonial.position}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* Page Navigation - only show if we have more than one page */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-6 mt-12">
+          <motion.button
+            className={`flex items-center justify-center w-10 h-10 rounded-full ${currentPage === 0 ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-gray-700 hover:bg-primary text-white'} transition-colors duration-300`}
+            whileHover={currentPage > 0 ? { scale: 1.1 } : {}}
+            whileTap={currentPage > 0 ? { scale: 0.95 } : {}}
+            onClick={() => currentPage > 0 && setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 0}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </motion.button>
+          
+          {/* Page indicators */}
+          <div className="flex gap-2">
+            {[...Array(totalPages)].map((_, i) => (
+              <motion.button
+                key={i}
+                className={`w-3 h-3 rounded-full ${i === currentPage ? 'bg-primary' : 'bg-gray-600'} hover:bg-primary/80 transition-colors duration-300`}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setCurrentPage(i)}
+              />
+            ))}
+          </div>
+          
+          <motion.button
+            className={`flex items-center justify-center w-10 h-10 rounded-full ${currentPage === totalPages - 1 ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-gray-700 hover:bg-primary text-white'} transition-colors duration-300`}
+            whileHover={currentPage < totalPages - 1 ? { scale: 1.1 } : {}}
+            whileTap={currentPage < totalPages - 1 ? { scale: 0.95 } : {}}
+            onClick={() => currentPage < totalPages - 1 && setCurrentPage(currentPage + 1)}
+            disabled={currentPage === totalPages - 1}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </motion.button>
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -606,21 +606,21 @@ const ServicesPage = () => {
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {[
               {
-                quote: "Aevitas transformed our digital presence with AI-powered videos. Our engagement has increased by 300% since we started working together.",
-                author: "Sarah Johnson",
-                role: "Marketing Director, TechForward",
+                quote: "Medblen completely transformed the way we present our educational content. Their attention to narrative flow, clarity, and visuals made our videos not just informative — but truly engaging.",
+                author: "Jagaruksthan",
+                role: "Educational Content",
                 image: "/images/testimonial1.jpg"
               },
               {
-                quote: "The quality and consistency of content is remarkable. Their AI approach delivers better results than our previous traditional video production.",
-                author: "Michael Chen",
-                role: "CEO, GrowthMetrics",
+                quote: "Finding a team that understands both finance and storytelling is rare — but Medblen nailed it. From script refinement to polished edits, they helped us deliver high-conversion content.",
+                author: "Angelinvestment",
+                role: "Financial Education",
                 image: "/images/testimonial2.jpg"
               },
               {
-                quote: "We're generating more qualified leads than ever before through our YouTube channel that Aevitas manages for us. Worth every penny.",
-                author: "Jessica Williams",
-                role: "VP of Sales, SalesPro Solutions",
+                quote: "Medblen helped us build a full content engine — daily videos, AI voiceovers, fast edits, and a system that just works. We don't just get videos now, we get assets that educate and attract serious audiences.",
+                author: "We Trade Daily",
+                role: "Finance / Trading",
                 image: "/images/testimonial3.jpg"
               }
             ].map((testimonial, index) => {

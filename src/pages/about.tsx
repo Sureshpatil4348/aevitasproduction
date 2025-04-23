@@ -280,13 +280,13 @@ const AboutPage = () => {
                 title: "Customer Success",
                 icon: <FaHandshake />,
                 color: "from-purple-500 to-secondary",
-                description: "We measure our success by the success of our clients. We're committed to helping you achieve your digital marketing goals."
+                description: "Our team is committed to helping you achieve your digital marketing goals."
               },
               {
                 title: "Continuous Innovation",
                 icon: <FaLightbulb />,
                 color: "from-pink-500 to-red-500",
-                description: "We're constantly exploring new technologies and methodologies to improve our services and stay ahead of the curve."
+                description: "Our team constantly explores new technologies and methodologies to improve our services and stay ahead of the curve."
               },
               {
                 title: "Global Perspective",
@@ -298,7 +298,7 @@ const AboutPage = () => {
                 title: "Ethical AI",
                 icon: <FaRocket />,
                 color: "from-cyan-500 to-blue-500",
-                description: "We're committed to using AI responsibly, with transparency about AI-generated content and respect for intellectual property."
+                description: "Our company is committed to using AI responsibly, with transparency about AI-generated content and respect for intellectual property."
               },
               {
                 title: "Results-Driven",

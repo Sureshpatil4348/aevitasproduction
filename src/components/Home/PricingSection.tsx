@@ -176,7 +176,7 @@ const PricingSection = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Still have questions?</h3>
               <p className="text-gray-400 mb-6">
-                We're here to help you find the perfect plan for your YouTube channel's growth. 
+                Our team is here to help you find the perfect plan for your YouTube channel's growth. 
                 Contact our team for more detailed information about our services.
               </p>
               <Link 
@@ -194,7 +194,7 @@ const PricingSection = () => {
               <h4 className="text-xl font-bold text-white mb-4">Money-back guarantee</h4>
               <p className="text-gray-400">
                 Not satisfied with our service? Get a full refund within the first 14 days, 
-                no questions asked. We're confident in the quality of our AI-powered videos.
+                no questions asked. Aevitas is confident in the quality of our AI-powered videos.
               </p>
             </div>
           </div>

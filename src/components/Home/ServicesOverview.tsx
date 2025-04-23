@@ -174,28 +174,28 @@ const ServicesOverview = () => {
         >
           <h3 className="text-xl font-bold text-white mb-6">We optimize your content for all major platforms</h3>
           <div className="flex flex-wrap justify-center gap-6 items-center">
-            <div className="platform-icon w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 group">
-              <FaYoutube size={24} />
+            <div className="platform-icon w-14 h-14 text-white bg-red-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-red-600/30">
+              <FaYoutube size={28} />
               <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">YouTube</span>
             </div>
-            <div className="platform-icon w-12 h-12 text-white bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 group">
-              <FaInstagram size={24} />
+            <div className="platform-icon w-14 h-14 text-white bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-pink-500/30">
+              <FaInstagram size={28} />
               <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Instagram</span>
             </div>
-            <div className="platform-icon w-12 h-12 text-white bg-black rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 group">
-              <FaTiktok size={24} />
+            <div className="platform-icon w-14 h-14 text-white bg-black rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-cyan-400/30">
+              <FaTiktok size={28} />
               <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">TikTok</span>
             </div>
-            <div className="platform-icon w-12 h-12 text-white bg-blue-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 group">
-              <FaTwitter size={24} />
+            <div className="platform-icon w-14 h-14 text-white bg-blue-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-400/30">
+              <FaTwitter size={28} />
               <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Twitter</span>
             </div>
-            <div className="platform-icon w-12 h-12 text-white bg-blue-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 group">
-              <FaLinkedin size={24} />
+            <div className="platform-icon w-14 h-14 text-white bg-blue-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-600/30">
+              <FaLinkedin size={28} />
               <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">LinkedIn</span>
             </div>
-            <div className="platform-icon w-12 h-12 text-white bg-blue-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 group">
-              <FaFacebook size={24} />
+            <div className="platform-icon w-14 h-14 text-white bg-blue-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-700/30">
+              <FaFacebook size={28} />
               <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Facebook</span>
             </div>
           </div>
@@ -220,4 +220,4 @@ const ServicesOverview = () => {
   );
 };
 
-export default ServicesOverview; 
+export default ServicesOverview;

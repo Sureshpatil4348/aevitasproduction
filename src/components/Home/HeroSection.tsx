@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaPlay } from 'react-icons/fa';
 import Image from 'next/image';
 
 const HeroSection = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gray-950">
       {/* Background elements */}
@@ -35,7 +37,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-gray-300 text-lg mb-8">
-              Let our AI create, edit, and publish videos for you. Build a passive income stream with high-quality YouTube content—all without recording a single video yourself.
+              Specializing in high-quality content production, we help YouTube creators and brands elevate their presence through storytelling, strategic editing, and long-format videos that captivate audiences and drive growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -62,47 +64,51 @@ const HeroSection = () => {
             className="relative"
           >
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-800">
-              {/* Video Thumbnail */}
-              <div className="relative w-full h-full">
-                <Image 
-                  src="/images/demo-thumbnail.jpg" 
-                  alt="Aevitas AI in action" 
-                  fill 
-                  className="object-cover"
-                  priority
-                />
-                
-                {/* Play Button Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                  <div className="bg-primary hover:bg-secondary rounded-full p-5 cursor-pointer transition-colors">
-                    <FaPlay className="text-white w-5 h-5 ml-1" />
+              {!showVideo ? (
+                // Thumbnail and Play Button
+                <div className="relative w-full h-full group cursor-pointer" onClick={() => setShowVideo(true)}>
+                  <Image 
+                    src="/images/demo-thumbnail.jpg" 
+                    alt="Aevitas AI in action" 
+                    fill 
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    priority={true}
+                  />
+                  
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/50 transition-colors duration-300">
+                    <div className="bg-primary/80 group-hover:bg-primary rounded-full p-5 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                      <FaPlay className="text-white w-5 h-5 ml-1" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                // Video Player
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/dVlC9Uz7E08?autoplay=1&rel=0&modestbranding=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
             </div>
 
-            {/* Video Description */}
-            <div className="absolute -bottom-8 -right-8 max-w-sm bg-gray-900/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 shadow-xl">
-              <h3 className="text-xl font-bold text-white mb-2">See the Aevitas AI Difference</h3>
-              <p className="text-gray-300">
-                Our AI generates videos that look and sound like they were created by human professionals.
-              </p>
-            </div>
-            
             {/* Stats or Features Highlights */}
-            <div className="absolute -top-6 -left-6 bg-gray-900/90 backdrop-blur-sm rounded-xl p-4 border border-gray-800 shadow-lg">
+            <div className="absolute -bottom-8 -right-8 bg-gray-900/90 backdrop-blur-sm rounded-xl p-4 border border-gray-800 shadow-lg">
               <div className="flex items-center space-x-4">
                 <div>
-                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">100%</div>
-                  <div className="text-gray-400 text-xs">AI-Generated</div>
+                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">40%</div>
+                  <div className="text-gray-400 text-xs">Higher Retention</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">5K</div>
-                  <div className="text-gray-400 text-xs">Quality</div>
+                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">3x</div>
+                  <div className="text-gray-400 text-xs">Faster Growth</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">24/7</div>
-                  <div className="text-gray-400 text-xs">Creation</div>
+                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">2x</div>
+                  <div className="text-gray-400 text-xs">Revenue</div>
                 </div>
               </div>
             </div>

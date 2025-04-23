@@ -1,0 +1,11 @@
+export { default as Hero } from './Hero';
+export { default as TabNavigation } from './TabNavigation';
+export { default as MetricsStrip } from './MetricsStrip';
+export { default as PortfolioGrid } from './PortfolioGrid';
+export { default as PortfolioCard } from './PortfolioCard';
+export { default as PortfolioModal } from './PortfolioModal';
+export { default as CreatorPartners } from './CreatorPartners';
+export { default as AutomationPipeline } from './AutomationPipeline';
+export { default as Testimonials } from './Testimonials';
+export { default as CTABanner } from './CTABanner';
+export { default as TechFooter } from './TechFooter'; 
