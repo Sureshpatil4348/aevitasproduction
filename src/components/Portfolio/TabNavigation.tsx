@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 // Define tab types
@@ -20,6 +20,23 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
   activeChips,
   setActiveChips
 }) => {
+  const [isSticky, setIsSticky] = useState(true);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  // Function to handle scroll and determine when to unstick
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Unstick after scrolling past a certain point (e.g., 800px)
+      setIsSticky(scrollY < 800);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Function to handle chip toggle
   const toggleChip = (chip: ChipType) => {
     if (activeChips.includes(chip)) {
@@ -47,7 +64,10 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
   ];
 
   return (
-    <div className="sticky top-20 z-40 bg-gray-950/80 backdrop-blur-lg border-y border-gray-800 py-6">
+    <div 
+      ref={navRef}
+      className={`${isSticky ? 'sticky top-20' : 'relative'} z-40 bg-gray-950/80 backdrop-blur-lg border-y border-gray-800 py-6`}
+    >
       <div className="container">
         {/* Tab Navigation */}
         <div className="relative flex justify-center mb-6">
