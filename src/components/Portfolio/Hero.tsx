@@ -17,7 +17,7 @@ const Hero = () => {
         >
           <source src="/videos/portfolio-showreel.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
-          <img src="/images/portfolio-hero-fallback.jpg" alt="Aevitas video production showreel" className="w-full h-full object-cover" />
+          <img src="/images/portfolio-hero-fallback.jpg" alt="Medblen video production showreel" className="w-full h-full object-cover" />
         </video>
       </div>
 

@@ -176,7 +176,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-white">Email</p>
-                    <p className="text-gray-400">SURESH@aevitas.ai</p>
+                    <p className="text-gray-400">SURESH@Medblen.ai</p>
                   </div>
                 </li>
                 <li className="flex items-start">

@@ -122,7 +122,7 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-6 text-gray-300 text-lg">
                 <p>
-                  Aevitas was founded in 2023 by a team of AI enthusiasts, video producers, and digital marketers who recognized a significant gap in the content creation market: the ability to produce high-quality video content at scale.
+                  Medblen was founded in 2023 by a team of AI enthusiasts, video producers, and digital marketers who recognized a significant gap in the content creation market: the ability to produce high-quality video content at scale.
                 </p>
                 <p>
                   After years of working with brands struggling to maintain consistent video output due to high costs and production complexities, we developed an AI-powered solution that automates the most time-consuming aspects of video production while maintaining exceptional quality.
@@ -155,7 +155,7 @@ const AboutPage = () => {
               <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-primary/20 border border-gray-800 aspect-video">
                 <iframe 
                   src="https://www.youtube.com/embed/Y6ZDDlXuciM" 
-                  title="Aevitas AI Video Production"
+                  title="Medblen AI Video Production"
                   className="absolute inset-0 w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen
@@ -163,7 +163,7 @@ const AboutPage = () => {
                 
                 {/* Gradient overlay for the bottom text */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none">
-                  <h3 className="text-2xl font-bold text-white mb-2">See the Aevitas AI Difference</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">See the Medblen AI Difference</h3>
                   <p className="text-gray-300">Discover how our AI-powered video creation process can transform your brand's digital presence.</p>
                 </div>
               </div>
@@ -353,7 +353,7 @@ const AboutPage = () => {
                 Global <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Talent</span> Network
               </h2>
               <p className="text-xl text-gray-300">
-                Aevitas brings together exceptional talent from around the world to deliver video content that performs.
+                Medblen brings together exceptional talent from around the world to deliver video content that performs.
               </p>
             </motion.div>
           </div>
@@ -436,7 +436,7 @@ const AboutPage = () => {
             <div className="relative p-12 md:p-16 text-center text-white">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Work With Us?</h2>
               <p className="mx-auto mt-4 max-w-2xl text-xl">
-                Join the many brands that have transformed their video content strategy with Aevitas and see the difference our AI-powered approach can make.
+                Join the many brands that have transformed their video content strategy with Medblen and see the difference our AI-powered approach can make.
               </p>
               <div className="mt-10">
                 <Link

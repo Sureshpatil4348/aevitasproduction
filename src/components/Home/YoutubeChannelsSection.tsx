@@ -92,7 +92,7 @@ const YoutubeChannelsSection = () => {
               </h2>
             </div>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              These channels are 100% powered by Aevitas AI, generating content, editing videos, 
+              These channels are 100% powered by Medblen AI, generating content, editing videos, 
               and publishing automatically without human intervention.
             </p>
           </motion.div>

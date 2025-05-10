@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://aevitas.vercel.app/sitemap.xml 
+Sitemap: https://Medblen.vercel.app/sitemap.xml 

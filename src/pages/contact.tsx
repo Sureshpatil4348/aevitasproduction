@@ -253,7 +253,7 @@ const ContactPage = () => {
                       { 
                         icon: <FaEnvelope />, 
                         title: "Email Us", 
-                        content: "contact@aevitas.ai", 
+                        content: "contact@Medblen.ai", 
                         highlight: "24-hour response time"
                       },
                       { 

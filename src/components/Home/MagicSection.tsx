@@ -72,7 +72,7 @@ const MagicSection = () => {
               <FaMagic className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              The Aevitas <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Magic</span> in Action
+              The Medblen <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Magic</span> in Action
             </h2>
           </div>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -129,7 +129,7 @@ const MagicSection = () => {
                 <>
                   <img 
                     src="/images/demo-thumbnail.jpg" 
-                    alt="Aevitas AI Demo" 
+                    alt="Medblen AI Demo" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -157,14 +157,14 @@ const MagicSection = () => {
               )}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 pt-24">
                 <span className="text-white font-medium text-sm px-3 py-1 bg-primary/80 rounded-full">Watch Demo</span>
-                <h3 className="text-xl font-bold text-white mt-2">See Aevitas AI generate a video from scratch</h3>
+                <h3 className="text-xl font-bold text-white mt-2">See Medblen AI generate a video from scratch</h3>
               </div>
             </div>
 
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-white mb-4">Experience the Full Process</h3>
               <p className="text-gray-400 mb-8">
-                Watch as Aevitas AI takes a simple topic and transforms it into a fully-produced, ready-to-publish 
+                Watch as Medblen AI takes a simple topic and transforms it into a fully-produced, ready-to-publish 
                 YouTube video in a matter of minutes, not days or weeks.
               </p>
               

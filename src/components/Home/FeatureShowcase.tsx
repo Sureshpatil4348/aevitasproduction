@@ -38,7 +38,7 @@ const features = [
     id: 5,
     icon: <FaCode className="text-secondary text-3xl" />,
     title: 'Complete Automation',
-    description: 'Set your publishing schedule and let Aevitas handle everything - from content creation to posting and optimization.',
+    description: 'Set your publishing schedule and let Medblen handle everything - from content creation to posting and optimization.',
     animation: { delay: 0.5 }
   }
 ];
@@ -65,7 +65,7 @@ const FeatureShowcase = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-bold text-white mb-4">The Aevitas Magic in Action</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">The Medblen Magic in Action</h2>
           <p className="text-xl text-gray-300">
             See how our AI-powered system transforms your ideas into fully produced videos ready for publication.
           </p>
@@ -105,7 +105,7 @@ const FeatureShowcase = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src="/images/ai-workflow.png"
-                alt="Aevitas AI Workflow"
+                alt="Medblen AI Workflow"
                 width={800}
                 height={450}
                 className="object-cover rounded-lg"

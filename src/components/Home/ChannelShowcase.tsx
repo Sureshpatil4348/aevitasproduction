@@ -140,11 +140,11 @@ const ChannelShowcase = () => {
   const getPlatformIcon = (platform: string) => {
     switch (platform) {
       case 'instagram':
-        return <FaInstagram className="mr-2" />;
+        return <FaInstagram className="mr-1.5 text-base" />;
       case 'youtube':
-        return <FaYoutube className="mr-2" />;
+        return <FaYoutube className="mr-1.5 text-base" />;
       default:
-        return <FaExternalLinkAlt className="mr-2" />;
+        return <FaExternalLinkAlt className="mr-1.5 text-base" />;
     }
   };
 
@@ -185,14 +185,14 @@ const ChannelShowcase = () => {
   };
 
   return (
-    <section className="section bg-gray-950 text-white py-24 relative overflow-hidden" id="portfolio">
+    <section className="section bg-gray-950 text-white py-16 sm:py-20 md:py-24 relative overflow-hidden" id="portfolio">
       {/* Background design elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-2/3 h-1/2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl -top-1/4 -right-1/4"></div>
         <div className="absolute w-1/2 h-1/2 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-full blur-3xl -bottom-1/4 -left-1/4"></div>
       </div>
       
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4 mx-auto">
         <motion.div
           className="text-center max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -200,15 +200,16 @@ const ChannelShowcase = () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           ref={ref}
         >
-          <h2 className="text-4xl font-bold mb-4">Our Portfolio</h2>
-          <p className="text-xl text-gray-300 mb-12">
-            Every project is designed to elevate brands, engage audiences, and maximize results—discover how our production expertise makes the difference
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Experience the difference we make.
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12">
+          From founder-led shows to creator-driven channels, we craft cinematic content and automate workflows with AI — Helping you scale faster, grow stronger, and stand out with style.
           </p>
         </motion.div>
 
         {/* Category Selection Tabs */}
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
@@ -217,7 +218,7 @@ const ChannelShowcase = () => {
             <button
               key={key}
               onClick={() => setActiveCategory(key as 'shortForm' | 'longForm' | 'documentaries')}
-              className={`py-3 px-5 rounded-full font-medium transition-all duration-300
+              className={`py-2 sm:py-3 px-4 sm:px-5 rounded-full text-sm sm:text-base font-medium transition-all duration-300
                 ${activeCategory === key 
                 ? 'bg-primary text-white shadow-lg shadow-primary/25 transform scale-105' 
                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
@@ -234,11 +235,11 @@ const ChannelShowcase = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-white text-center">{selectedCategory.title} <span className="text-primary">Highlights</span></h3>
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-white text-center">{selectedCategory.title} <span className="text-primary">Highlights</span></h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {selectedCategory.samples.slice(0, 3).map((video, index) => (
               <motion.div 
                 key={index} 
@@ -248,7 +249,7 @@ const ChannelShowcase = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 <a href={video.url} target="_blank" rel="noopener noreferrer" className="block">
-                  <div className="relative aspect-[16/9] overflow-hidden cursor-pointer min-h-[240px] md:min-h-[260px] lg:min-h-[320px]">
+                  <div className="relative aspect-[16/9] overflow-hidden cursor-pointer min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[260px]">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                     
                     {/* Use actual thumbnail from YouTube if possible */}
@@ -261,8 +262,8 @@ const ChannelShowcase = () => {
                     </div>
                     
                     {/* Platform badge */}
-                    <div className="absolute top-3 right-3 z-20">
-                      <div className={`flex items-center rounded-full px-3 py-1 text-xs font-semibold ${video.platform === 'youtube' ? 'bg-red-600' : 'bg-gradient-to-r from-purple-600 to-pink-600'}`}>
+                    <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-20">
+                      <div className={`flex items-center rounded-full px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-semibold ${video.platform === 'youtube' ? 'bg-red-600' : 'bg-gradient-to-r from-purple-600 to-pink-600'}`}>
                         {getPlatformIcon(video.platform)}
                         <span>{video.platform === 'youtube' ? 'YouTube' : 'Instagram'}</span>
                       </div>
@@ -270,8 +271,7 @@ const ChannelShowcase = () => {
                   </div>
                 </a>
                 
-                <div className="p-4">
-                  
+                <div className="p-3 sm:p-4">
                   <a 
                     href={video.url} 
                     target="_blank" 
@@ -294,37 +294,37 @@ const ChannelShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h3 className="text-2xl font-bold mb-8 text-white">Creators We've Collaborated With</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-white">Creators We've Collaborated With</h3>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {selectedCategory.creators.map((creator, index) => (
               <a 
                 key={index}
                 href={creator.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-full text-white flex items-center transition-all duration-300"
+                className="bg-gray-800 hover:bg-gray-700 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm text-white flex items-center transition-all duration-300"
               >
                 {getPlatformIcon(creator.platform)}
-                {creator.name}
+                <span className="truncate max-w-[120px] sm:max-w-none">{creator.name}</span>
               </a>
             ))}
           </div>
         </motion.div>
 
         <motion.div
-          className="mt-16 text-center"
+          className="mt-10 sm:mt-16 text-center"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link 
             href="/channels" 
-            className="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all inline-flex items-center shadow-lg shadow-primary/20"
+            className="bg-primary hover:bg-primary/90 text-white font-medium py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all inline-flex items-center shadow-lg shadow-primary/20 text-sm sm:text-base"
           >
             View Our Complete Portfolio
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-1.5 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>
           </Link>

@@ -1,10 +1,10 @@
-# Aevitas - AI-Powered Video Content Creation
+# Medblen - AI-Powered Video Content Creation
 
-This is the website for Aevitas, a company that leverages cutting-edge AI to automate and simplify video content creation for multiple platforms.
+This is the website for Medblen, a company that leverages cutting-edge AI to automate and simplify video content creation for multiple platforms.
 
 ## Project Overview
 
-Aevitas harnesses AI to build automated YouTube channels and engaging digital videos, offering end-to-end service to clients. The website showcases five unique YouTube channels (Ridiculously Rich, ConBuster, Whodunit Files, Showdown Central, RankItUp) and presents clear service packages for potential clients.
+Medblen harnesses AI to build automated YouTube channels and engaging digital videos, offering end-to-end service to clients. The website showcases five unique YouTube channels (Ridiculously Rich, ConBuster, Whodunit Files, Showdown Central, RankItUp) and presents clear service packages for potential clients.
 
 ## Features
 
@@ -35,8 +35,8 @@ Aevitas harnesses AI to build automated YouTube channels and engaging digital vi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Sureshpatil4348/aevitasproduction.git
-cd aevitasproduction
+git clone https://github.com/Sureshpatil4348/Medblenproduction.git
+cd Medblenproduction
 ```
 
 2. Install dependencies:

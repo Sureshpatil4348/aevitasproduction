@@ -68,7 +68,7 @@ const ProcessSection = () => {
         >
           <h2 className="text-4xl font-bold">
             <span className="text-white">The </span>
-            <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Aevitas Magic</span>
+            <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Medblen Magic</span>
             <span className="text-white"> in Action</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-300">

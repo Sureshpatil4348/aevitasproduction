@@ -232,7 +232,7 @@ const ServicesPage = () => {
             >
               <h2 className="text-5xl font-bold mb-6 leading-tight">
                 <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">End-to-End</span>
-                <span className="block text-white">Video Solutions</span>
+                <span className="block text-white">Content Solutions</span>
               </h2>
               <p className="text-xl text-gray-300">
                 From concept to distribution, our AI-driven workflow ensures high-quality, engaging content at scale.
@@ -502,7 +502,7 @@ const ServicesPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              See how we transform your ideas into engaging video content
+              FROM IDEA TO IMPACT
             </motion.p>
           </div>
           
@@ -521,7 +521,7 @@ const ServicesPage = () => {
                 { 
                   step: "02", 
                   title: "AI-Powered Content Creation", 
-                  description: "Our AI technology generates scripts, avatars, and visual elements aligned with your brand.",
+                  description: "Using AI tools and human insight, we generate data-backed scripts, high-performing content hooks, and branded storylines designed to engage and convert.",
                   icon: <FaRobot className="w-8 h-8" />
                 },
                 { 
@@ -539,7 +539,7 @@ const ServicesPage = () => {
                 { 
                   step: "05", 
                   title: "Analytics & Optimization", 
-                  description: "Continuous performance tracking ensures your content strategy evolves and improves.",
+                  description: "Performance doesn’t end at posting. We track, test, and iterate your content using real-time insights to keep your growth compounding.",
                   icon: <FaChartLine className="w-8 h-8" />
                 }
               ].map((item, index) => {
@@ -677,7 +677,7 @@ const ServicesPage = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Ready to Transform Your Video Strategy?
+                Unlock Your Brand's True Potential with AI-Driven Video Strategy
               </motion.h2>
               
               <motion.p 
@@ -687,7 +687,8 @@ const ServicesPage = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Join successful brands who've 10x'd their online presence and lead generation with our complete AI video solution.
+                Join top-tier creators and businesses scaling faster with our full-stack content engine — powered by AI, crafted by experts, and built for growth.
+
               </motion.p>
               
               <motion.div
@@ -700,7 +701,7 @@ const ServicesPage = () => {
                   href="/contact" 
                   className="inline-block px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
                 >
-                  Get Started Today
+                  Book Your Free Strategy Call
                 </Link>
               </motion.div>
             </div>

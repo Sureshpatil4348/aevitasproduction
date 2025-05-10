@@ -86,11 +86,11 @@ const TechFooter = () => {
           <div>
             <h4 className="text-white text-sm font-semibold mb-4">Legal</h4>
             <p className="text-sm text-gray-400 mb-3">
-              &copy; {new Date().getFullYear()} Aevitas. All rights reserved.
+              &copy; {new Date().getFullYear()} Medblen. All rights reserved.
             </p>
             <p className="text-xs text-gray-500">
               All trademarks and brand names are the property of their respective owners. 
-              Aevitas is not affiliated with the platforms shown in our portfolio.
+              Medblen is not affiliated with the platforms shown in our portfolio.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ const TechFooter = () => {
         {/* Bottom line */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-xs text-gray-600">
-            Made with ❤️ by the Aevitas team. Powered by AI. Delivered at scale.
+            Made with ❤️ by the Medblen team. Powered by AI. Delivered at scale.
           </p>
         </div>
       </div>

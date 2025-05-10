@@ -361,9 +361,9 @@ const PortfolioPage = () => {
   return (
     <>
       <Head>
-        <title>Portfolio - Aevitas | AI-Powered Video Content Automation</title>
+        <title>Portfolio - Medblen | AI-Powered Video Content Automation</title>
         <meta name="description" content="Explore our portfolio of AI-powered video content creation across Short-form, Long-form, and Documentary formats. See how we help creators scale content production." />
-        <meta property="og:title" content="Portfolio - Aevitas | AI-Powered Video Content" />
+        <meta property="og:title" content="Portfolio - Medblen | AI-Powered Video Content" />
         <meta property="og:description" content="Explore our portfolio of AI-powered video content creation for creators and businesses. See our work across Short-form, Long-form and Documentary formats." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/og-portfolio.jpg" />

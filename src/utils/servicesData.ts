@@ -12,8 +12,8 @@ export type Service = {
 export const servicesData: Service[] = [
   {
     id: 'scripting',
-    title: 'AI-Powered Scripting',
-    description: 'Our AI generates compelling scripts optimized for engagement and conversions, perfectly matched to your brand voice and audience preferences.',
+    title: 'Smart Scripting',
+    description: 'Our generative AI writes high-converting scripts tailored to your brand voice, niche, and platform — in seconds.',
     iconName: 'pen',
     colorClass: 'text-primary',
     benefits: [

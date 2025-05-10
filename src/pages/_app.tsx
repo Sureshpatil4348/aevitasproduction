@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Aevitas - AI-Powered Video Content Creation</title>
+        <title>Medblen - AI-Powered Video Content Creation</title>
         <meta name="description" content="Leverage cutting-edge AI to automate and simplify video content creation for multiple platforms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

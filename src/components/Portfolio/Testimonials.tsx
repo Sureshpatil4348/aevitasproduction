@@ -142,7 +142,7 @@ const Testimonials = () => {
       company: 'Insight Fusion',
       videoUrl: 'https://www.youtube.com/embed/5hvvV_k1cHk',
       thumbnail: '/images/Rajiv Mehta.jpeg',
-      quote: 'Aevitas has transformed our content output. We\'re producing 3 times more videos with the same team.'
+      quote: 'Medblen has transformed our content output. We\'re producing 3 times more videos with the same team.'
     },
     {
       id: '2',
@@ -160,7 +160,7 @@ const Testimonials = () => {
       company: 'Jagruk Sthan',
       videoUrl: 'https://www.youtube.com/embed/4JC7weXtpqY',
       thumbnail: '/images/Amit Sharma.jpeg',
-      quote: 'Since partnering with Aevitas, our channel growth has accelerated by 300%. They handle everything.'
+      quote: 'Since partnering with Medblen, our channel growth has accelerated by 300%. They handle everything.'
     }
   ];
 
@@ -170,7 +170,7 @@ const Testimonials = () => {
       id: 'cs1',
       client: 'Interview Kickstart',
       title: 'Scaling Educational Content Production',
-      description: 'How Aevitas helped a tech education platform scale their short-form content to reach new audiences.',
+      description: 'How Medblen helped a tech education platform scale their short-form content to reach new audiences.',
       challenge: 'Interview Kickstart had hours of valuable long-form content but struggled to repurpose it for social media at scale.',
       solution: 'We implemented an AI-driven content pipeline that automatically identified key insights from their workshops and transformed them into platform-optimized short-form videos.',
       results: [

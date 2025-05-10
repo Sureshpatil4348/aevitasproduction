@@ -15,7 +15,7 @@ This guide details where to find and modify the text and links for each section 
     *   Introductory Paragraphs (describing the founding)
     *   Link Text ("See our AI-powered services") - Links to `/services`
     *   YouTube Video URL (`https://www.youtube.com/embed/Y6ZDDlXuciM`)
-    *   Video Overlay Text ("See the Aevitas AI Difference", "Discover how...")
+    *   Video Overlay Text ("See the Medblen AI Difference", "Discover how...")
     *   All the above are directly within the `src/pages/about.tsx` file.
 
 ---

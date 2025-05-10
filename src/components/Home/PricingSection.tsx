@@ -194,7 +194,7 @@ const PricingSection = () => {
               <h4 className="text-xl font-bold text-white mb-4">Money-back guarantee</h4>
               <p className="text-gray-400">
                 Not satisfied with our service? Get a full refund within the first 14 days, 
-                no questions asked. Aevitas is confident in the quality of our AI-powered videos.
+                no questions asked. Medblen is confident in the quality of our AI-powered videos.
               </p>
             </div>
           </div>

@@ -51,19 +51,19 @@ const ServicesOverview = () => {
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case 'pen':
-        return <FaPenFancy className="h-6 w-6" />;
+        return <FaPenFancy className="h-5 w-5 sm:h-6 sm:w-6" />;
       case 'robot':
-        return <FaRobot className="h-6 w-6" />;
+        return <FaRobot className="h-5 w-5 sm:h-6 sm:w-6" />;
       case 'edit':
-        return <FaEdit className="h-6 w-6" />;
+        return <FaEdit className="h-5 w-5 sm:h-6 sm:w-6" />;
       case 'share':
-        return <FaShareSquare className="h-6 w-6" />;
+        return <FaShareSquare className="h-5 w-5 sm:h-6 sm:w-6" />;
       case 'chart':
-        return <FaChartLine className="h-6 w-6" />;
+        return <FaChartLine className="h-5 w-5 sm:h-6 sm:w-6" />;
       case 'tags':
-        return <FaTags className="h-6 w-6" />;
+        return <FaTags className="h-5 w-5 sm:h-6 sm:w-6" />;
       default:
-        return <FaPenFancy className="h-6 w-6" />;
+        return <FaPenFancy className="h-5 w-5 sm:h-6 sm:w-6" />;
     }
   };
 
@@ -106,14 +106,14 @@ const ServicesOverview = () => {
   };
 
   return (
-    <section className="section bg-gray-950 text-white py-24 relative overflow-hidden" id="services">
+    <section className="section bg-gray-950 text-white py-16 sm:py-20 md:py-24 relative overflow-hidden" id="services">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
         <div className="absolute w-2/3 h-1/2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl -top-1/4 -right-1/4"></div>
         <div className="absolute w-1/2 h-1/2 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-full blur-3xl -bottom-1/4 -left-1/4"></div>
       </div>
       
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4 mx-auto">
         <motion.div
           className="section-heading"
           initial={{ opacity: 0, y: 20 }}
@@ -121,17 +121,17 @@ const ServicesOverview = () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           ref={ref}
         >
-          <h2 className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl font-bold">
             10x Your Brand with AI Video Production
           </h2>
-          <p className="mt-4 text-lg text-gray-300">
-            From concept to publishing, we handle every aspect of your video marketing across all major platforms, 
-            helping you grow your business without the hassle.
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-300">
+          From scripting to publishing, we handle every part of your content - 
+          powered by AI and optimized for scale. Publish faster, grow smarter, and win across every platform
           </p>
         </motion.div>
 
         <motion.div
-          className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -139,14 +139,14 @@ const ServicesOverview = () => {
           {servicesData.map((service) => (
             <motion.div
               key={service.id}
-              className="bg-gray-900 rounded-xl p-6 shadow-lg border border-gray-800 transform hover:-translate-y-2 transition-all duration-300"
+              className="bg-gray-900 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-gray-800 transform hover:-translate-y-2 transition-all duration-300"
               variants={itemVariants}
             >
-              <div className={`${getIconBgColor(service.id)} w-14 h-14 rounded-lg flex items-center justify-center mb-5 ${getIconColor(service.id)}`}>
+              <div className={`${getIconBgColor(service.id)} w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-5 ${getIconColor(service.id)}`}>
                 {renderIcon(service.iconName)}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-300 mb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{service.title}</h3>
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6">
                 {service.description}
               </p>
               <Link 
@@ -155,7 +155,7 @@ const ServicesOverview = () => {
                   e.preventDefault();
                   toggleService(service.id);
                 }}
-                className="text-primary font-medium hover:underline flex items-center"
+                className="text-primary text-sm sm:text-base font-medium hover:underline flex items-center"
               >
                 See benefits
                 <svg className="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -167,51 +167,53 @@ const ServicesOverview = () => {
         </motion.div>
 
         <motion.div
-          className="mt-12 text-center"
+          className="mt-8 sm:mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h3 className="text-xl font-bold text-white mb-6">We optimize your content for all major platforms</h3>
-          <div className="flex flex-wrap justify-center gap-6 items-center">
-            <div className="platform-icon w-14 h-14 text-white bg-red-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-red-600/30">
-              <FaYoutube size={28} />
-              <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">YouTube</span>
+          <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6">Built to Dominate Every Major Platform
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 items-center">
+            <div className="platform-icon w-10 h-10 sm:w-14 sm:h-14 text-white bg-red-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-red-600/30">
+              <FaYoutube size={20} className="sm:text-2xl" />
+              <span className="absolute mt-12 sm:mt-16 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">YouTube</span>
             </div>
-            <div className="platform-icon w-14 h-14 text-white bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-pink-500/30">
-              <FaInstagram size={28} />
-              <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Instagram</span>
+            <div className="platform-icon w-10 h-10 sm:w-14 sm:h-14 text-white bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-pink-500/30">
+              <FaInstagram size={20} className="sm:text-2xl" />
+              <span className="absolute mt-12 sm:mt-16 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Instagram</span>
             </div>
-            <div className="platform-icon w-14 h-14 text-white bg-black rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-cyan-400/30">
-              <FaTiktok size={28} />
-              <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">TikTok</span>
+            <div className="platform-icon w-10 h-10 sm:w-14 sm:h-14 text-white bg-black rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-cyan-400/30">
+              <FaTiktok size={20} className="sm:text-2xl" />
+              <span className="absolute mt-12 sm:mt-16 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">TikTok</span>
             </div>
-            <div className="platform-icon w-14 h-14 text-white bg-blue-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-400/30">
-              <FaTwitter size={28} />
-              <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Twitter</span>
+            <div className="platform-icon w-10 h-10 sm:w-14 sm:h-14 text-white bg-blue-400 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-400/30">
+              <FaTwitter size={20} className="sm:text-2xl" />
+              <span className="absolute mt-12 sm:mt-16 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Twitter</span>
             </div>
-            <div className="platform-icon w-14 h-14 text-white bg-blue-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-600/30">
-              <FaLinkedin size={28} />
-              <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">LinkedIn</span>
+            <div className="platform-icon w-10 h-10 sm:w-14 sm:h-14 text-white bg-blue-600 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-600/30">
+              <FaLinkedin size={20} className="sm:text-2xl" />
+              <span className="absolute mt-12 sm:mt-16 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">LinkedIn</span>
             </div>
-            <div className="platform-icon w-14 h-14 text-white bg-blue-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-700/30">
-              <FaFacebook size={28} />
-              <span className="absolute mt-16 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Facebook</span>
+            <div className="platform-icon w-10 h-10 sm:w-14 sm:h-14 text-white bg-blue-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-125 group shadow-lg shadow-blue-700/30">
+              <FaFacebook size={20} className="sm:text-2xl" />
+              <span className="absolute mt-12 sm:mt-16 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Facebook</span>
             </div>
           </div>
         </motion.div>
 
         <motion.div
-          className="mt-16 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 p-8 text-center hover:border-primary/30 transition-all duration-500"
+          className="mt-10 sm:mt-16 rounded-lg sm:rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 p-5 sm:p-8 text-center hover:border-primary/30 transition-all duration-500"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <h3 className="mb-3 text-2xl font-bold text-white">Ready to grow your business with AI-powered videos?</h3>
-          <p className="mb-6 text-lg text-gray-300">
-            Join successful brands who've 10x'd their online presence and lead generation with our complete video solution.
+          <h3 className="mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-white">Ready to 10x Your Growth with AI-Powered Content?
+          </h3>
+          <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-300">
+          Join leading brands using our all-in-one AI video system to scale visibility, leads, and revenue — faster than ever.
           </p>
-          <Link href="/services" className="btn btn-primary btn-lg">
+          <Link href="/services" className="btn btn-primary">
             Explore All Services
           </Link>
         </motion.div>

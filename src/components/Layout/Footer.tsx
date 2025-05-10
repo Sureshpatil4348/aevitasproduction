@@ -25,36 +25,36 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'YouTube', icon: <FaYoutube size={20} />, href: 'https://youtube.com', color: 'hover:bg-red-600' },
-    { name: 'Instagram', icon: <FaInstagram size={20} />, href: 'https://instagram.com', color: 'hover:bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400' },
-    { name: 'TikTok', icon: <FaTiktok size={20} />, href: 'https://tiktok.com', color: 'hover:bg-black hover:text-cyan-400' },
-    { name: 'Twitter', icon: <FaTwitter size={20} />, href: 'https://twitter.com', color: 'hover:bg-blue-400' },
-    { name: 'LinkedIn', icon: <FaLinkedin size={20} />, href: 'https://linkedin.com', color: 'hover:bg-blue-600' },
-    { name: 'Facebook', icon: <FaFacebook size={20} />, href: 'https://facebook.com', color: 'hover:bg-blue-700' },
+    { name: 'YouTube', icon: <FaYoutube size={18} />, href: 'https://youtube.com', color: 'hover:bg-red-600' },
+    { name: 'Instagram', icon: <FaInstagram size={18} />, href: 'https://instagram.com', color: 'hover:bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400' },
+    { name: 'TikTok', icon: <FaTiktok size={18} />, href: 'https://tiktok.com', color: 'hover:bg-black hover:text-cyan-400' },
+    { name: 'Twitter', icon: <FaTwitter size={18} />, href: 'https://twitter.com', color: 'hover:bg-blue-400' },
+    { name: 'LinkedIn', icon: <FaLinkedin size={18} />, href: 'https://linkedin.com', color: 'hover:bg-blue-600' },
+    { name: 'Facebook', icon: <FaFacebook size={18} />, href: 'https://facebook.com', color: 'hover:bg-blue-700' },
   ];
 
   return (
-    <footer className="bg-gray-950 py-12 relative">
+    <footer className="bg-gray-950 py-8 sm:py-12 relative">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
       </div>
-      <div className="container relative z-10">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+      <div className="container relative z-10 px-4 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="col-span-1 sm:col-span-2">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Aevitas</span>
+              <span className="text-xl sm:text-2xl font-bold text-primary">Medblen</span>
             </Link>
-            <p className="mt-4 max-w-md text-gray-300">
+            <p className="mt-3 sm:mt-4 max-w-md text-sm sm:text-base text-gray-300">
               Leverage cutting-edge AI to automate and simplify content creation, particularly video content for multiple platforms.
             </p>
-            <div className="mt-6 flex space-x-3">
+            <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-300 transition-all duration-300 ${link.color} hover:text-white hover:shadow-lg hover:shadow-primary/20 transform hover:scale-110`}
+                  className={`w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-300 transition-all duration-300 ${link.color} hover:text-white hover:shadow-lg hover:shadow-primary/20 transform hover:scale-110`}
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -64,14 +64,14 @@ const Footer = () => {
           </div>
 
           {footerLinks.map((column) => (
-            <div key={column.title}>
-              <h3 className="text-lg font-semibold text-white">{column.title}</h3>
-              <ul className="mt-4 space-y-3">
+            <div key={column.title} className="col-span-1">
+              <h3 className="text-base sm:text-lg font-semibold text-white">{column.title}</h3>
+              <ul className="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
                 {column.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 transition-colors duration-300 hover:text-primary"
+                      className="text-sm sm:text-base text-gray-300 transition-colors duration-300 hover:text-primary"
                     >
                       {link.name}
                     </Link>
@@ -82,9 +82,9 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-gray-800 pt-8">
-          <p className="text-center text-sm text-gray-400">
-            &copy; {currentYear} Aevitas. All rights reserved.
+        <div className="mt-8 sm:mt-12 border-t border-gray-800 pt-6 sm:pt-8">
+          <p className="text-center text-xs sm:text-sm text-gray-400">
+            &copy; {currentYear} Medblen. All rights reserved.
           </p>
         </div>
       </div>
