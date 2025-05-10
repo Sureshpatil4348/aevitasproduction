@@ -320,7 +320,7 @@ const ChannelShowcase = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link 
-            href="/channels" 
+            href="/portfolio" 
             className="bg-primary hover:bg-primary/90 text-white font-medium py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all inline-flex items-center shadow-lg shadow-primary/20 text-sm sm:text-base"
           >
             View Our Complete Portfolio

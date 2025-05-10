@@ -213,7 +213,7 @@ const ServicesOverview = () => {
           <p className="mb-4 sm:mb-6 text-base sm:text-lg text-gray-300">
           Join leading brands using our all-in-one AI video system to scale visibility, leads, and revenue — faster than ever.
           </p>
-          <Link href="/services" className="btn btn-primary">
+          <Link href="/services/" className="btn btn-primary">
             Explore All Services
           </Link>
         </motion.div>
