@@ -111,10 +111,10 @@ const CaseStudyCard = ({ study, delay }: { study: CaseStudyType; delay: number }
                       <div key={index} className="relative overflow-hidden bg-gray-900/80 p-3 rounded-lg border border-gray-800/50 hover:border-accent/30 transition-colors duration-300">
                         <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/5 rounded-full"></div>
                         <div className="relative">
-                          <div className="text-xs font-normal text-gray-400 mb-2">{result.label}</div>
-                          <div className="flex flex-col gap-1 items-center">
-                            <span className="text-gray-500 text-xs">{result.before}</span>
-                            <span className="text-accent font-bold text-base">{result.after}</span>
+                          <div className="text-xs font-normal text-gray-400 mb-2 text-center">{result.label}</div>
+                          <div className="flex flex-col gap-1 items-center text-center">
+                            <span className="text-gray-500 text-xs text-center">{result.before}</span>
+                            <span className="text-accent font-bold text-base text-center">{result.after}</span>
                           </div>
                         </div>
                       </div>
@@ -201,8 +201,8 @@ const Testimonials = () => {
       solution: 'We developed and produced a 6-part documentary series using AI-assisted scripting and cinematic production techniques.',
       results: [
         { before: 'No video content', after: '6 episodes', label: 'Content Library' },
-        { before: '0', after: '120,000+', label: 'Series Views' },
-        { before: '0', after: '25%', label: 'Lead Conversion' }
+        { before: '', after: '120,000+', label: 'Series Views' },
+        { before: '', after: '%', label: 'Lead Conversion' }
       ]
     }
   ];
