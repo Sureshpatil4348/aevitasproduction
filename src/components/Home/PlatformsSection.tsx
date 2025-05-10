@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaPlay, FaShareSquare, FaPlus, FaEdit, FaYoutube, FaInstagram, FaTiktok, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
 
 const PlatformsSection = () => {
   const [ref, inView] = useInView({
@@ -275,11 +276,11 @@ const PlatformsSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-2 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center p-8">
+              <Link href="/portfolio" className="md:col-span-2 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center p-8 cursor-pointer hover:from-primary/30 hover:to-secondary/30 transition-all duration-300">
                 <div className="text-center">
                   <p className="text-white text-sm">View the case study</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>
