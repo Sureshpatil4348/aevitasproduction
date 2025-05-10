@@ -51,7 +51,7 @@ const HeroSection = () => {
                 Get Started Today
               </Link>
               <Link 
-                href="#how-it-works" 
+                href="/services" 
                 className="bg-gray-900 border border-gray-700 hover:bg-gray-800 text-white font-medium py-3 px-5 sm:px-6 rounded-lg transition-all text-center sm:text-left mt-2 sm:mt-0"
               >
                 Learn How It Works
