@@ -167,7 +167,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-white">Phone</p>
-                    <p className="text-gray-400">(555) 123-4567</p>
+                    <p className="text-gray-400">+91 6362731684</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -176,7 +176,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-white">Email</p>
-                    <p className="text-gray-400">SURESH@Medblen.ai</p>
+                    <p className="text-gray-400">contact@Medblen.com</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -186,7 +186,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-white">Address</p>
                     <p className="text-gray-400">
-                      123 Innovation Way<br />San Francisco, CA 94103
+                    Vihar Gokul Road Hubali<br /> India 580030
                     </p>
                   </div>
                 </li>
@@ -199,9 +199,8 @@ const ContactSection = () => {
                 Prefer to talk directly? Schedule a free 30-minute discovery call with one of our AI video specialists.
               </p>
               <a
-                href="#"
+                href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9"
                 className="btn btn-primary block w-full text-center"
-                onClick={(e) => e.preventDefault()}
               >
                 Book a Call
               </a>

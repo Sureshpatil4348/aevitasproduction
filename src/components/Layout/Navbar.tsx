@@ -73,7 +73,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Link
-            href="/contact"
+            href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9"
             className="btn btn-primary px-4 py-2 text-sm md:text-base"
           >
             Get Started
@@ -120,7 +120,7 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <Link
-                  href="/contact"
+                  href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9"
                   className="mt-3 block w-full rounded-md bg-primary px-4 py-3 text-center text-white"
                   onClick={closeMenu}
                 >

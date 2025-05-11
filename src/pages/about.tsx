@@ -440,7 +440,7 @@ const AboutPage = () => {
               </p>
               <div className="mt-10">
                 <Link
-                  href="/contact"
+                  href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9"
                   className="inline-block rounded-full bg-white px-10 py-4 font-bold text-primary transition-all duration-300 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20 transform hover:-translate-y-1"
                 >
                   Get Started

@@ -174,9 +174,9 @@ const Testimonials = () => {
       challenge: 'Interview Kickstart had hours of valuable long-form content but struggled to repurpose it for social media at scale.',
       solution: 'We implemented an AI-driven content pipeline that automatically identified key insights from their workshops and transformed them into platform-optimized short-form videos.',
       results: [
-        { before: '2-3 clips', after: '20-25 clips', label: 'Weekly Output' },
-        { before: '5.2%', after: '28.4%', label: 'Engagement Rate' },
-        { before: '12 hours', after: '2 hours', label: 'Production Time' }
+        { before: '', after: '20-25 Videos', label: 'Weekly Output' },
+        { before: '', after: '18.4%', label: 'Engagement Rate' },
+        { before: '', after: '2 hours', label: 'Production Time' }
       ]
     },
     {
@@ -187,9 +187,9 @@ const Testimonials = () => {
       challenge: 'Chirag had deep expertise in finance but limited time and video production knowledge to build his online presence.',
       solution: 'We created a custom content strategy across multiple platforms, and handled all aspects of production from scripting to distribution.',
       results: [
-        { before: '15K', after: '250K+', label: 'Followers' },
-        { before: '3-5K', after: '50-100K', label: 'Avg. Views' },
-        { before: '1 video/week', after: '5 videos/week', label: 'Production Rate' }
+        { before: '', after: '250K+', label: 'Followers Count' },
+        { before: '', after: '50-100K', label: 'Avg. Views Per month' },
+        { before: '', after: '5 VPW', label: 'Production Rate' }
       ]
     },
     {
@@ -200,9 +200,9 @@ const Testimonials = () => {
       challenge: 'Angel Investments wanted to create premium long-form content that conveyed complex financial concepts in an engaging way.',
       solution: 'We developed and produced a 6-part documentary series using AI-assisted scripting and cinematic production techniques.',
       results: [
-        { before: 'No video content', after: '6 episodes', label: 'Content Library' },
+        { before: '', after: '6 Videos', label: 'Content Library' },
         { before: '', after: '120,000+', label: 'Series Views' },
-        { before: '', after: '%', label: 'Lead Conversion' }
+        { before: '', after: '8%', label: 'Lead Conversion' }
       ]
     }
   ];

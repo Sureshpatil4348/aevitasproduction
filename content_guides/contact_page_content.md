@@ -50,7 +50,7 @@ This guide details where to find and modify the text and links for each section 
 *   **Component:** `src/pages/contact.tsx` (within the final `<section>`)
 *   **Content Location:**
     *   **Section Header:** Headline ("Visit Our Office") and paragraph ("We're located in...") are directly within `src/pages/contact.tsx`.
-    *   **Map Placeholder Text:** Address ("123 Innovation Way", "San Francisco, CA 94103") and placeholder note ("Interactive map would be embedded here") are directly within `src/pages/contact.tsx`.
+    *   **Map Placeholder Text:** Address ("Vihar Gokul Road Hubali - India 580030 CA 94103") and placeholder note ("Interactive map would be embedded here") are directly within `src/pages/contact.tsx`.
     *   **Map Overlay Text:** Title ("Our Headquarters") and address are directly within `src/pages/contact.tsx`.
 *   **Links:** No interactive links in this section (map is a placeholder).
 

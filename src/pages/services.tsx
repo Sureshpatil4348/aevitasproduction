@@ -176,7 +176,7 @@ const ServicesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              <Link href="/contact" className="relative overflow-hidden group rounded-full">
+              <Link href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9" className="relative overflow-hidden group rounded-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-80 group-hover:opacity-100 transition-all duration-300"></div>
                 <div className="relative z-10 px-8 py-4 text-white font-bold flex items-center">
                   Get Started
@@ -539,7 +539,7 @@ const ServicesPage = () => {
                 { 
                   step: "05", 
                   title: "Analytics & Optimization", 
-                  description: "Performance doesn’t end at posting. We track, test, and iterate your content using real-time insights to keep your growth compounding.",
+                  description: "Performance doesn't end at posting. We track, test, and iterate your content using real-time insights to keep your growth compounding.",
                   icon: <FaChartLine className="w-8 h-8" />
                 }
               ].map((item, index) => {
@@ -698,7 +698,7 @@ const ServicesPage = () => {
                 viewport={{ once: true }}
               >
                 <Link 
-                  href="/contact" 
+                  href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9" 
                   className="inline-block px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
                 >
                   Book Your Free Strategy Call

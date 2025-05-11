@@ -90,20 +90,22 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             {/* Primary CTA */}
-            <Link href="/contact" className="btn-primary px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 transform hover:-translate-y-1">
+            <Link 
+              href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9" 
+              className="btn-primary px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 transform hover:-translate-y-1"
+            >
               Book a Discovery Call
             </Link>
             
             {/* Secondary CTA */}
-            <button 
-              onClick={() => {
-                // Logic to open lightbox with showreel would go here
-                console.log('Open showreel');
-              }}
+            <Link 
+              href="https://youtu.be/5hvvV_k1cHk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-ghost px-8 py-4 rounded-full text-lg font-bold border-2 border-white/20 hover:border-white/40 backdrop-blur-sm bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              Watch Showreel
-            </button>
+              Watch Sample Video
+            </Link>
           </motion.div>
         </motion.div>
       </div>

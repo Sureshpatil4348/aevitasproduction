@@ -212,7 +212,7 @@ const ContactPage = () => {
                 </a>
                 
                 <a href="tel:+15551234567" className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-transparent border border-gray-700 hover:border-primary text-white font-medium transition-all">
-                  <FaPhone className="mr-2" /> (555) 123-4567
+                  <FaPhone className="mr-2" /> +91 6362731684
                 </a>
               </motion.div>
             </motion.div>
@@ -247,19 +247,19 @@ const ContactPage = () => {
                       { 
                         icon: <FaPhone />, 
                         title: "Call Us", 
-                        content: "(555) 123-4567", 
+                        content: "+91 6362731684", 
                         highlight: "Available 9am-6pm PST"
                       },
                       { 
                         icon: <FaEnvelope />, 
                         title: "Email Us", 
-                        content: "contact@Medblen.ai", 
+                        content: "contact@Medblen.com", 
                         highlight: "24-hour response time"
                       },
                       { 
                         icon: <FaMapMarkerAlt />, 
                         title: "Visit Us", 
-                        content: "123 Innovation Way, San Francisco", 
+                        content: "Vihar Gokul Road Hubali - India 580030", 
                         highlight: "By appointment only"
                       }
                     ].map((item, index) => (
@@ -603,7 +603,7 @@ const ContactPage = () => {
                 <h3 className="text-xl font-bold text-white mb-4">Connect with Us</h3>
                 <div className="grid grid-cols-3 gap-3">
                   <motion.a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/medblen"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-800 text-gray-300 transition-colors hover:bg-primary/20 hover:text-primary"
@@ -613,7 +613,7 @@ const ContactPage = () => {
                     <span className="text-sm">LinkedIn</span>
                   </motion.a>
                   <motion.a
-                    href="https://twitter.com"
+                    href="https://x.com/medblen?s=21"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-800 text-gray-300 transition-colors hover:bg-primary/20 hover:text-primary"
@@ -623,7 +623,7 @@ const ContactPage = () => {
                     <span className="text-sm">Twitter</span>
                   </motion.a>
                   <motion.a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/medblen_/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-800 text-gray-300 transition-colors hover:bg-primary/20 hover:text-primary"
@@ -646,7 +646,7 @@ const ContactPage = () => {
                   <h3 className="text-xl font-bold text-white mb-3">Ready for a Demo?</h3>
                   <p className="text-gray-300 mb-4">See how our AI-powered video platform can transform your content strategy.</p>
                   <a 
-                    href="/services" 
+                    href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9" 
                     className="inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-xl bg-white text-primary font-bold transition-all hover:bg-gray-100"
                   >
                     Schedule a Demo <FaArrowRight className="ml-2" />
@@ -683,7 +683,7 @@ const ContactPage = () => {
               Visit Our <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Office</span>
             </h2>
             <p className="text-gray-300 mb-12 text-lg">
-              Our office is located in the heart of San Francisco's innovation district. Schedule an appointment to drop by and discuss your project in person.
+              Our office is located in the heart of karnataka's innovation district. Schedule an appointment to drop by and discuss your project in person.
             </p>
           </motion.div>
           
@@ -701,8 +701,8 @@ const ContactPage = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-gray-800 text-gray-300">
               <div className="text-center max-w-lg p-8">
                 <FaMapMarkerAlt size={48} className="text-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">123 Innovation Way</h3>
-                <p className="text-gray-300 mb-6">San Francisco, CA 94103</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Vihar Gokul Road Hubali</h3>
+                <p className="text-gray-300 mb-6">India 580030</p>
                 <div className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-700 text-white">
                   <span>Interactive map would be embedded here</span>
                 </div>
@@ -717,7 +717,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">Our Headquarters</h3>
-                  <p className="text-gray-300">123 Innovation Way, San Francisco, CA 94103</p>
+                  <p className="text-gray-300">Vihar Gokul Road Hubali - India 580030</p>
                 </div>
               </div>
             </div>

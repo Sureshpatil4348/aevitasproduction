@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaYoutube, FaInstagram, FaLinkedin, FaTwitter, FaFacebook, FaTiktok } from 'react-icons/fa';
+import { FaYoutube, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Services', href: '/services' },
-        { name: 'Channels', href: '/channels' },
+        { name: 'Portfolio', href: '/portfolio' },
         { name: 'Contact', href: '/contact' },
       ],
     },
@@ -20,17 +20,16 @@ const Footer = () => {
       links: [
         { name: 'Privacy Policy', href: '/privacy-policy' },
         { name: 'Terms of Service', href: '/terms-of-service' },
+        { name: 'Refund Policy', href: '/refund-policy' },
       ],
     },
   ];
 
   const socialLinks = [
-    { name: 'YouTube', icon: <FaYoutube size={18} />, href: 'https://youtube.com', color: 'hover:bg-red-600' },
-    { name: 'Instagram', icon: <FaInstagram size={18} />, href: 'https://instagram.com', color: 'hover:bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400' },
-    { name: 'TikTok', icon: <FaTiktok size={18} />, href: 'https://tiktok.com', color: 'hover:bg-black hover:text-cyan-400' },
-    { name: 'Twitter', icon: <FaTwitter size={18} />, href: 'https://twitter.com', color: 'hover:bg-blue-400' },
-    { name: 'LinkedIn', icon: <FaLinkedin size={18} />, href: 'https://linkedin.com', color: 'hover:bg-blue-600' },
-    { name: 'Facebook', icon: <FaFacebook size={18} />, href: 'https://facebook.com', color: 'hover:bg-blue-700' },
+    { name: 'YouTube', icon: <FaYoutube size={18} />, href: 'https://www.youtube.com/@MedblenEdge', color: 'hover:bg-red-600' },
+    { name: 'Instagram', icon: <FaInstagram size={18} />, href: 'https://www.instagram.com/medblen_/', color: 'hover:bg-gradient-to-br from-pink-500 via-purple-600 to-orange-400' },
+    { name: 'Twitter', icon: <FaTwitter size={18} />, href: 'https://x.com/medblen?s=21', color: 'hover:bg-blue-400' },
+    { name: 'LinkedIn', icon: <FaLinkedin size={18} />, href: 'https://www.linkedin.com/company/medblen', color: 'hover:bg-blue-600' },
   ];
 
   return (
