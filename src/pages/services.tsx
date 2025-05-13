@@ -176,7 +176,7 @@ const ServicesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              <Link href="https://calendar.app.google/3Fs1rWsUvvVJpeDx9" className="relative overflow-hidden group rounded-full">
+              <Link href="/contact" className="relative overflow-hidden group rounded-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-80 group-hover:opacity-100 transition-all duration-300"></div>
                 <div className="relative z-10 px-8 py-4 text-white font-bold flex items-center">
                   Get Started

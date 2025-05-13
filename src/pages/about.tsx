@@ -70,7 +70,6 @@ const AboutPage = () => {
             }}
             transition={{ duration: 18, repeat: Infinity, repeatType: "reverse" }}
           />
-          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
           
           {/* Floating particles */}
           <div className="absolute inset-0 opacity-30">
@@ -418,7 +417,7 @@ const AboutPage = () => {
       {/* CTA Section with enhanced visual effects */}
       <section className="py-24 bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-full h-full bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
+          {/* Grid pattern removed */}
           <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/20 rounded-full blur-[100px]"></div>
           <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-secondary/20 rounded-full blur-[100px]"></div>
         </div>

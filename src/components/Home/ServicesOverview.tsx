@@ -202,6 +202,7 @@ const ServicesOverview = () => {
           </div>
         </motion.div>
 
+        {/* CTA section hidden per request
         <motion.div
           className="mt-10 sm:mt-16 rounded-lg sm:rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 p-5 sm:p-8 text-center hover:border-primary/30 transition-all duration-500"
           initial={{ opacity: 0 }}
@@ -217,6 +218,7 @@ const ServicesOverview = () => {
             Explore All Services
           </Link>
         </motion.div>
+        */}
       </div>
     </section>
   );
